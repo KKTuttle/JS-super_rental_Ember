@@ -3,20 +3,13 @@
 We hope you find exactly what you're looking for in a place to stay.
 
 <ul>
-  {{#each model.rental as |rental|}}
+  {{#each model as |rental|}}
      {{rental-tile rental=rental destroyRental='destroyRental'}}
   {{/each}}
 </ul>
 
-<div class="row">
-  {{#each model.announcement as |announcement|}}
-    {{announcement-view announcement=announcement}}
-  {{/each}}
-</div>
-
 {{new-rental save2="save3"}}
-{{new-announcement save2='save3'}}
-
 
 {{#link-to 'about'}}About{{/link-to}}
 {{#link-to 'contact'}}Click here to contact us.{{/link-to}}
+{{#link-to 'announcement'}}Newest Announcements{{/link-to}}
